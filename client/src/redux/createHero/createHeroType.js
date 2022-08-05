@@ -1,0 +1,2 @@
+export const POST_HERO_FAILURE = 'POST_HERO_FAILURE'
+export const CLEAR_MESSAGE = 'CLEAR_MESSAGE'

@@ -1,0 +1,4 @@
+export const HEROES_PAGE = 'HEROES_PAGE'
+export const HERO_DETAILED_PAGE = 'HERO_DETAILED_PAGE'
+export const CREATE_HERO_PAGE = 'CREATE_HERO_PAGE'
+export const EDIT_PAGE = 'EDIT_PAGE'

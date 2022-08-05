@@ -1,0 +1,66 @@
+.createHero {
+    margin: 50px 5% 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.createHero form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    width: 100%;
+}
+
+.createHero input, .createHero textarea {
+    border: none;
+    border-bottom: 1px solid #595959;
+    font-size: 20px;
+    color: #595959;
+    width: 100%;
+}
+
+.createHero input:focus, .createHero textarea:focus {
+    outline: none;
+    border-bottom: 1px solid #d11a1d;
+}
+
+.createHero label {
+    font-size: 22px;
+    color: #595959;
+}
+
+.createHero button {
+    border: 1px solid #595959;
+    height: 50px;
+    font-size: 22px;
+    color: #595959;
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.createHero button:hover {
+    font-weight: 700;
+    border: 2px solid #d11a1d;
+}
+
+.error {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #d11a1d;
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.success {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #00b200;
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+

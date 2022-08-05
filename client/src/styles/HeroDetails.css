@@ -1,0 +1,120 @@
+.heroPage {
+    display: flex;
+    column-gap: 60px;
+    row-gap: 30px;
+    margin: 50px 5% 30px;
+}
+
+.heroImageSelector {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    cursor: pointer;
+}
+
+.heroImageSelector img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.heroImageSelector img:hover {
+    outline: 2px solid #d11a1d;
+}
+
+.heroImage img {
+    object-fit: cover;
+    width: 450px;
+    height: 450px;
+    border-radius: 10px;
+}
+
+.heroInfo {
+    display: flex;
+    flex-direction: column;
+    color: #595959;
+    width: 600px;
+}
+
+.heroInfo img {
+    height: 40px;
+    width: 40px;
+}
+
+.heroNickname {
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.heroRealName {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.heroDescription, .heroSuperpowers, .heroCatchPhrase {
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.heroDescription div, .heroSuperpowers div, .heroCatchPhrase div {
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .heroPage {
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .heroImageSelector {
+        flex-direction: row;
+        column-gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .heroInfo {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .heroImageSelector img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .heroImage img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .heroDescription, .heroSuperpowers, .heroCatchPhrase {
+        margin-top: 10px;
+    }
+
+    .heroInfo img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .heroNickname {
+        font-size: 20px;
+    }
+
+    .heroRealName {
+        font-size: 17px;
+    }
+
+    .heroDescription div, .heroSuperpowers div, .heroCatchPhrase div {
+        font-size: 15px;
+    }
+}

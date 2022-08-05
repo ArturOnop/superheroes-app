@@ -1,0 +1,33 @@
+.pagination {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.pagination button {
+    height: 50px;
+    width: 50px;
+    background: none;
+    border: 2px solid #595959;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.pagination button:hover {
+    border: 2px solid #d11a1d;
+}
+
+.pagination button.active {
+    height: 50px;
+    width: 50px;
+    background: none;
+    border: 2px solid #d11a1d;
+    font-weight: bold;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 20px;
+}
