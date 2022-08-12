@@ -9,8 +9,6 @@ import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css';
 import 'filepond/dist/filepond.min.css'
 import {useDispatch, useSelector} from "react-redux";
 import {clearMessage, postHero} from "../redux/createHero/createHeroActions";
-import {getNewPage} from "../redux/page/pageActions";
-import {HEROES_PAGE} from "../redux/page/pageType";
 
 registerPlugin(
     FilePondPluginFileEncode,
@@ -47,7 +45,6 @@ const CreateHero = () => {
             catchPhraseInput: "",
             files: []
         });
-        dispatch(getNewPage(HEROES_PAGE));
     }
 
     return (

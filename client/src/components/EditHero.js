@@ -9,9 +9,6 @@ import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css';
 import 'filepond/dist/filepond.min.css'
 import {useDispatch, useSelector} from "react-redux";
 import {patchClearMessage, patchHero} from "../redux/editHero/editHeroActions";
-import {getNewPage} from "../redux/page/pageActions";
-import {HEROES_PAGE} from "../redux/page/pageType";
-
 
 registerPlugin(
     FilePondPluginFileEncode,
@@ -19,9 +16,8 @@ registerPlugin(
     FilePondPluginFileValidateSize,
     FilePondPluginFileValidateType);
 
-const EditHero = () => {
+const EditHero = ({heroData}) => {
     const editHeroData = useSelector(state => state.editHero)
-    const heroData = useSelector(state => state.page)
     const dispatch = useDispatch();
 
     const [state, setState] = useState({
@@ -52,7 +48,6 @@ const EditHero = () => {
             catchPhraseInput: "",
             files: []
         });
-        dispatch(getNewPage(HEROES_PAGE));
     }
 
     return (

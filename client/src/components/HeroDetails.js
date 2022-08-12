@@ -1,8 +1,10 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect, useState} from "react";
 import {clearHero, getHero} from "../redux/hero/heroActions";
+import {useParams} from "react-router-dom";
 
-const HeroDetails = ({id}) => {
+const HeroDetails = () => {
+    const {id} = useParams();
     const heroData = useSelector(state => state.hero)
     const dispatch = useDispatch();
 

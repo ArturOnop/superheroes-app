@@ -9,6 +9,10 @@
     top: 0;
 }
 
+.nav a {
+    text-decoration: none;
+}
+
 .navLogo {
     color: #595959;
     font-size: 30px;

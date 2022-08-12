@@ -1,24 +1,23 @@
 import Heroes from "./Heroes";
 import HeroDetails from "./HeroDetails";
 import Nav from "./Nav";
-import {useSelector} from "react-redux";
-import {CREATE_HERO_PAGE, EDIT_PAGE, HEROES_PAGE} from "../redux/page/pageType";
 import CreateHero from "./CreateHero";
 import EditHero from "./EditHero";
+import {Routes, Route, Navigate, useLocation} from "react-router-dom";
 
 function App() {
-    const pageData = useSelector(state => state.page)
+    const location = useLocation();
 
     return (
         <div className="App">
             <Nav/>
-            {pageData.page === HEROES_PAGE ?
-                <Heroes/> :
-                pageData.page === CREATE_HERO_PAGE ?
-                    <CreateHero/> :
-                    pageData.page === EDIT_PAGE ?
-                        <EditHero/> :
-                        <HeroDetails id={pageData.id}/>}
+            <Routes>
+                <Route path="/heroes" element={<Heroes/>}/>
+                <Route path="/create-hero" element={<CreateHero/>}/>
+                <Route path="/edit-hero" element={<EditHero heroData={location.state}/>}/>
+                <Route path="/hero/:id" element={<HeroDetails/>}/>
+                <Route path="*" element={<Navigate to="/heroes"/>}/>
+            </Routes>
         </div>
     );
 }
